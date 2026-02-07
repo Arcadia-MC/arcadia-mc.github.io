@@ -9,8 +9,8 @@
 
 :root {
   --main-font: 'Inter', sans-serif;
-  --main-color: #39BEFF;
-  --background-color: #24272B;
+  --main-color: #4cc6d0; /*#39BEFF;*/
+  --background-color: #001526; /*#24272B;*/
   --white-color: #FFFFFF;
   --black-color: #000000;
   --description-color: #D2D0D0;

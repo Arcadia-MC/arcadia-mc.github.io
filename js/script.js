@@ -38,10 +38,12 @@ const config = {
     */
     userSKinTypeInAdminTeam: "bust", /*[full, bust, head, face, front, frontFull, skin]*/
     atGroupsDefaultColors: {
-        equipe: "rgba(255, 124, 124, 0.5)",
+        admins: "rgba(255, 124, 124, 0.5)",
+        staff: "rgba(124, 255, 124, 0.5)",
+
     },
     adminTeamPage: {
-        equipe: [
+        admins: [
             {
                 inGameName: "Neplex",
                 rank: "Admin",
@@ -53,6 +55,21 @@ const config = {
                 rank: "Admin",
                 skinUrlOrPathToFile: "",
                 rankColor: "rgba(255, 3, 3, 1)"
+            }
+        ],
+        
+        staff: [
+            {
+                inGameName: "Aela__",
+                rank: "Gardienne",
+                skinUrlOrPathToFile: "",
+                rankColor: "rgba(3, 3, 255, 1)"
+            },
+            {
+                inGameName: "Zoryynn",
+                rank: "Gardien",
+                skinUrlOrPathToFile: "",
+                rankColor: "rgba(3, 3, 255, 1)"
             },
             {
                 inGameName: "Usapii",
