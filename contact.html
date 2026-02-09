@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     
-    <link rel="icon" href="images/logo.png" />
+    <link rel="icon" href="images/logo.webp" />
     <meta name="description" content="Arcadia, Le serveur minecraft RPG goût vanille." />
-    <meta name="author" content="Astronawta" />
+    <meta name="author" content="Arcadia team" />
     
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/pages/conttact.css" />
@@ -16,31 +16,30 @@
 </head>
 <body>
     <!--Navbar-->
-    <div class="navbar">
+    <nav class="navbar">
         <div class="menu-mobile">
-            <a href="index.html">
+            <a href="index.html" aria-label="Aller à la page d'accueil">
                 <div class="logo">
-                    <img src="images/logo.png" alt="Server logo" class="logo-img">
+                    <img src="images/logo.webp" alt="Logo du serveur Arcadia" class="logo-img">
                     <h3 class="server-name">Arcadia</h3>
                 </div>
             </a>
-            
-            <div class="hamburger">
+            <div class="hamburger" role="button" aria-label="Ouvrir/fermer le menu" aria-expanded="false" tabindex="0">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
         
-        <div class="links">
-            <a href="index.html" class="link">Accueil</a>
-            <a href="rules.html" class="link">Règlement</a>
-            <a href="admin-team.html" class="link">L'équipe</a>
-            <a href="https://maps.arcadia-mc.eu" target="_blank" class="link">La carte</a>
-            <a href="#" class="link active">Contact</a>
+        <div class="links" role="menubar">
+            <a href="index.html" class="link" role="menuitem">Accueil</a>
+            <a href="rules.html" class="link" role="menuitem">Règlement</a>
+            <a href="admin-team.html" class="link" role="menuitem">L'équipe</a>
+            <a href="https://maps.arcadia-mc.eu" target="_blank" class="link" role="menuitem">La carte</a>
+            <a href="#" class="link active" role="menuitem" aria-current="page">Contact</a>
         </div>
-    </div>
+    </nav>
     
     <!--Header-->
-    <section id="header">
+    <header id="header">
         <div class="content">
             <div class="info">
                 <p class="minecraft-server-ip">play.arcadia-mc.eu</p>
@@ -50,7 +49,7 @@
                 Do you have a problem and need to solve it? Write to us below.
             </p>
         </div>
-    </section>
+    </header>
     
     <!--Contacts-->
     <section id="contacts">
@@ -111,12 +110,12 @@
             <span class="server-name-footer">Arcadia</span>. Le serveur RPG goût vanille !
         </p>
         <div class="social-links">
-            <a href="https://discord.arcadia-mc.eu" class="link discord-link-footer"><i class="fa-brands fa-discord"></i></a>
-            <a href="https://github.com/Arcadia-MC" class="link github-link-footer"><i class="fa-brands fa-github"></i></a>
+            <a href="https://discord.arcadia-mc.eu" class="link discord-link-footer" aria-label="Rejoindre le Discord du serveur"><i class="fa-brands fa-discord"></i></a>
+            <a href="https://github.com/Arcadia-MC" class="link github-link-footer" aria-label="Voir le GitHub du serveur"><i class="fa-brands fa-github"></i></a>
         </div>
     </footer>
 </body>
 
-<script src="js/script.js"></script>
+<script src="js/script.js" defer></script>
 <script src="https://kit.fontawesome.com/cbf5ee59c8.js" crossorigin="anonymous"></script>
 </html>
