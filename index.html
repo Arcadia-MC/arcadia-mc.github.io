@@ -226,7 +226,7 @@
     </section>
 
     <!--FAQs-->
-    <section id="faq">
+    <section id="faq" itemscope itemtype="https://schema.org/FAQPage">
         <div class="content">
             <div class="info">
                 <h2 class="section-title"><span>FAQ</span></h2>
@@ -234,13 +234,13 @@
             </div>
 
             <div class="accordion faqList">
-                <div class="accordion-item">
-                    <div class="accordion-item-header" role="button" aria-expanded="false" aria-controls="faq1" tabindex="0">
+                <div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="accordion-item-header" role="button" aria-expanded="false" aria-controls="faq1" tabindex="0" itemprop="name">
                         Je suis bloqué dans les limbes et le serveur me demande de me
                         connecter à Discord ?
                     </div>
-                    <div class="accordion-item-body" id="faq1" role="region" aria-hidden="true">
-                        <div class="accordion-item-body-content">
+                    <div class="accordion-item-body" id="faq1" role="region" aria-hidden="true" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div class="accordion-item-body-content" itemprop="text">
                             Lors de votre première connexion, le serveur vous demande de lier votre compte Minecraft à Discord afin
                             de vérifier votre accès. Cette étape est obligatoire et ne prend qu'une minute. Elle permet de renforcer
                             la sécurité du serveur, de lutter contre les comptes frauduleux et de garantir une communauté saine.
@@ -250,16 +250,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="accordion faqList">
-                <div class="accordion-item">
-                    <div class="accordion-item-header" role="button" aria-expanded="false" aria-controls="faq2" tabindex="0">
+                <div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="accordion-item-header" role="button" aria-expanded="false" aria-controls="faq2" tabindex="0" itemprop="name">
                         Il n'y a pas de commandes <code>/spawn</code> ou <code>/home</code> ?
                     </div>
-                    <div class="accordion-item-body" id="faq2" role="region" aria-hidden="true">
-                        <div class="accordion-item-body-content">
-                            Non, sur Arcadia, nous privilégions des mécaniques **in-game** plutôt que des commandes globales. Des
+                    <div class="accordion-item-body" id="faq2" role="region" aria-hidden="true" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div class="accordion-item-body-content" itemprop="text">
+                            Non, sur Arcadia, nous privilégions des mécaniques vanilla plutôt que des commandes globales. Des
                             équivalents existent toutefois sous forme d'objets ou via des PNJ : rendez-vous chez le sorcier pour
                             acheter une potion de rappel ou un parchemin de téléportation. Pour retrouver vos quêtes, titres ou
                             compétences, ouvrez simplement votre journal.
