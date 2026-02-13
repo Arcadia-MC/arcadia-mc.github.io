@@ -87,7 +87,7 @@ const config = {
     Emails are sent via https://formsubmit.co/
     */
     contactPage: {
-        email: "astronavta@example.com"
+        email: "arcadia@bitbaker.fr"
     }
 }
 
@@ -269,24 +269,20 @@ const setDataFromConfigToHtml = async () => {
 
             for (let j = 0; j < config.adminTeamPage[team].length; j++) {
                 let user = config.adminTeamPage[team][j];
-                const group = document.querySelector("." + team + " .users");
+                const group = document.querySelector(`.${team} .users`);
 
                 const userDiv = document.createElement("div");
                 userDiv.classList.add("user");
+                userDiv.setAttribute("itemscope", "");
+                userDiv.setAttribute("itemtype", "https://schema.org/Person");
 
-                let userSkin = config.adminTeamPage[team][j].skinUrlOrPathToFile;
-
-                if(userSkin == "") userSkin = await getSkinByUuid(user.inGameName);
-                let rankColor = config.atGroupsDefaultColors[team];
-
-                if(user.rankColor != "") {
-                    rankColor = user.rankColor;
-                }
+                let userSkin = user.skinUrlOrPathToFile || await getSkinByUuid(user.inGameName);
+                let rankColor = user.rankColor || config.atGroupsDefaultColors[team];
 
                 const userDivSchema = `
-                    <img src="${await (userSkin)}" alt="${user.inGameName}">
-                    <h5 class="name">${user.inGameName}</h5>
-                    <p class="rank ${team}" style="background: ${rankColor}">${user.rank}</p>  
+                    <img src="${userSkin}" alt="${user.inGameName}" loading="lazy" itemprop="image">
+                    <h5 class="name" itemprop="name">${user.inGameName}</h5>
+                    <p class="rank ${team}" style="background: ${rankColor}" itemprop="jobTitle">${user.rank}</p>
                 `;
 
                 userDiv.innerHTML = userDivSchema;
