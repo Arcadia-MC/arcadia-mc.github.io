@@ -172,7 +172,7 @@ const getMinecraftOnlinePlayer = async () => {
         return data.players.online;
     } catch (e) {
         console.log(e);
-        return "None";
+        return "0";
     }
 }
 
@@ -185,20 +185,19 @@ const getUuidByUsername = async (username) => {
         return data.id;
     } catch (e) {
         console.log(e);
-        return "None";
+        return null;
     }
 }
 
 const getSkinByUuid = async (username) => {
     try {
-        const skinByUuidApi = `https://visage.surgeplay.com/${config.userSKinTypeInAdminTeam}/512/${await getUuidByUsername(username)}`;
-        let response = await fetch(skinByUuidApi);
+        const uuid = await getUuidByUsername(username) || 'ec561538f3fd461daff5086b22154bce';
+        const skinByUuidApi = `https://visage.surgeplay.com/${config.userSKinTypeInAdminTeam}/512/${uuid}`;
 
-        if(response.status === 400) return `https://visage.surgeplay.com/${config.userSKinTypeInAdminTeam}/512/ec561538f3fd461daff5086b22154bce`;
-        else return skinByUuidApi;
+        return skinByUuidApi;
     } catch (e) {
         console.log(e);
-        return "None";
+        return `https://visage.surgeplay.com/${config.userSKinTypeInAdminTeam}/512/ec561538f3fd461daff5086b22154bce`;
     }
 }
 
