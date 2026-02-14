@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" itemscope itemtype="https://schema.org/FAQPage">
 <head>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-K4CFSL52');</script>
@@ -8,12 +8,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#001526" />
 
-    <meta name="description" content="Le serveur minecraft RPG goût vanille." />
+    <meta name="description" content="Arcadia est un serveur Minecraft RPG survie vanilla francophone depuis 2021. Explorez un monde inédit, une économie dynamique, des quêtes, des événements réguliers et une communauté active et bienveillante. Rejoignez l'aventure !" />
+    <meta name="keywords" content="serveur minecraft rpg, serveur minecraft survie, serveur minecraft francophone, serveur minecraft vanilla, minecraft rpg survie, minecraft économie dynamique, minecraft quêtes, minecraft événements, minecraft items customs, minecraft monde inédit, serveur minecraft communauté active, serveur minecraft 2026">
     <meta name="author" content="Arcadia team" />
 
-    <meta property="og:title" content="Arcadia">
-    <meta property="og:description" content="Le serveur minecraft RPG goût vanille.">
+    <meta property="og:title" content="Arcadia - Le serveur minecraft RPG goût vanille.">
+    <meta property="og:description" content="Arcadia est un serveur Minecraft RPG survie vanilla francophone depuis 2021. Explorez un monde inédit, une économie dynamique, des quêtes, des événements réguliers et une communauté active et bienveillante. Rejoignez l'aventure !">
     <meta property="og:image" content="images/header-background.webp">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:type" content="website">
@@ -27,7 +29,7 @@
     <link rel="stylesheet" href="css/pages/home.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" />
 
-    <title>Arcadia</title>
+    <title>Arcadia - Le serveur minecraft RPG goût vanille.</title>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -105,15 +107,23 @@
     <!--About us-->
     <section id="about">
         <div class="content">
-            <div class="left">
-                <h2 class="section-title">Qui sommes-nous ?</h2>
-                <p class="about-us">
-                    Nous sommes une communauté de joueurs réunis depuis la première aventure Arcadia en 2021.
-                    Créé à l'origine par un collectif de streamers: la <span>BotGaming</span> qui en sont
-                    aujourd'hui les Gardines, qui veillent au respect et à la bonne ambiance.
-                    <br /><br />
-                    Au fil des années, le serveur a connu plusieurs évolutions ; venez découvrir la nouvelle saison : <span>Arcadia Reborn</span>.
-                </p>
+            <div class="left" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h2 class="section-title" itemprop="name">Qui sommes-nous ?</h2>
+                <div class="about-us" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">
+                        Nous sommes une communauté de joueurs réunis depuis la première aventure Arcadia en 2021.
+                        Créé à l'origine par un collectif de streamers: la
+                        <span itemscope itemtype="https://schema.org/Organization">
+                            <a href="https://www.botgaming.eu" itemprop="url">
+                                <span itemprop="name">BOT Gaming</span>
+                            </a>
+                        </span>
+                        qui en sont aujourd'hui les Gardiens, qui veillent au respect et à la bonne ambiance.
+                        <br /><br />
+                        Au fil des années, le serveur a connu plusieurs évolutions.
+                        Venez découvrir la nouvelle saison : <span>Arcadia Reborn</span> une version RPG plus vanilla mais toujour sans Pay-To-Win.
+                    </p>
+                </div>
             </div>
             
             <div class="right">
@@ -242,7 +252,7 @@
     </section>
 
     <!--FAQs-->
-    <section id="faq" itemscope itemtype="https://schema.org/FAQPage">
+    <section id="faq">
         <div class="content">
             <div class="info">
                 <h2 class="section-title"><span>FAQ</span></h2>

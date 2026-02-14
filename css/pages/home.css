@@ -249,6 +249,11 @@
     line-height: 1.6;
 }
 
+#about .content .left .about-us a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
 #about .content .right {
     display: flex;
     justify-content: end;
