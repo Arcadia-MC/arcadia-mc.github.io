@@ -78,6 +78,11 @@
     line-height: 1.6;
 }
 
+#header .content .left .server-description a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
 #header .content .left .buttons {
     display: flex;
     flex-direction: row;

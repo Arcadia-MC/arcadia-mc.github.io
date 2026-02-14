@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" itemscope itemtype="https://schema.org/FAQPage">
+<html lang="fr">
 <head>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-K4CFSL52');</script>
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="css/pages/home.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" />
 
-    <title>Arcadia - Le serveur minecraft RPG goût vanille.</title>
+    <title>Arcadia - Le serveur Minecraft RPG goût vanille.</title>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -59,15 +59,25 @@
     </nav>
 
     <!--Header-->
-    <header id="header">
+    <header id="header" itemscope itemtype="https://schema.org/GameServer">
         <div class="content">
             <div class="left">
                 <div class="server-name">
                     <p>Le serveur RPG goût vanille !</p>
-                    <h1 class="minecraft-server-ip">play.arcadia-mc.eu</h1>
+                    <h1 class="minecraft-server-ip" itemprop="url">play.arcadia-mc.eu</h1>
                 </div>
-                <p class="server-description">
-                    Entrez dans Arcadia, un serveur minecraft francophone ouvert depuis 2021 et en constante évolution.
+                <p class="server-description" itemprop="description">
+                    Entrez dans <span itemprop="name">Arcadia</span>, un serveur
+                    <span itemscope itemtype="https://schema.org/VideoGame" itemprop="game">
+                        <link itemprop="sameAs" href="https://fr.wikipedia.org/wiki/Minecraft" />
+                        <span itemprop="name">Minecraft</span>
+                    </span>
+                    francophone fondé en <time>2021</time> par la
+                    <span id="botgaming" itemscope itemtype="https://schema.org/Organization" itemprop="owner">
+                        <link itemprop="sameAs" href="https://www.botgaming.eu" />
+                        <span itemprop="name">BOT Gaming</span>
+                    </span>
+                    et en constante évolution.
                     La cité est conçue pour accueillir aussi bien les bâtisseurs que les aventuriers et les commerçants.
                     <br /><br />
                     Rejoignez-nous et jouez avec vos amis.
@@ -80,7 +90,7 @@
             </div>
 
             <div class="right">
-                <img src="images/logo.webp" alt="Logo du serveur Arcadia" class="logo-img logo-img-header"/>
+                <img src="images/logo.webp" alt="Logo du serveur Arcadia" class="logo-img logo-img-header" itemprop="image"/>
                 
                 <div class="stats">
                     <div class="stat" role="region" aria-label="Statistiques Discord">
@@ -94,7 +104,7 @@
                         <div class="icon"><i class="fa-solid fa-server"></i></div>
                         <div class="texts">
                             <h2 class="stat-title">Minecraft</h2>
-                            <p><span class="stat-number minecraft-online-players" aria-live="polite">0</span> joueurs en ligne</p>
+                            <p><span class="stat-number minecraft-online-players" aria-live="polite" itemprop="playersOnline">0</span> joueurs en ligne</p>
                         </div>
                     </div>
                 </div>
@@ -102,7 +112,7 @@
         </div>
     </header>
 
-    <main>
+    <main itemscope itemtype="https://schema.org/FAQPage">
 
     <!--About us-->
     <section id="about">
@@ -114,6 +124,7 @@
                         Nous sommes une communauté de joueurs réunis depuis la première aventure Arcadia en 2021.
                         Créé à l'origine par un collectif de streamers: la
                         <span itemscope itemtype="https://schema.org/Organization">
+                            <link itemprop="sameAs" href="#botgaming" />
                             <a href="https://www.botgaming.eu" itemprop="url">
                                 <span itemprop="name">BOT Gaming</span>
                             </a>
