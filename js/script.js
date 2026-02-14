@@ -154,10 +154,10 @@ const getDiscordOnlineUsers = async () => {
         let response = await fetch(apiWidgetUrl);
         let data = await response.json();
 
-        if(!data.presence_count) return "None";
+        if(!data.presence_count) return "0";
         else return (await data.presence_count);
     } catch (e) {
-        return "None";
+        return "0";
     }
 }
 
@@ -243,13 +243,22 @@ const setDataFromConfigToHtml = async () => {
         copyIp();
         /*Set config data to header*/
         serverLogoHeader.src = `images/` + config.serverInfo.serverLogoImageFileName;
-        discordOnlineUsers.innerHTML = await getDiscordOnlineUsers();
-        minecraftOnlinePlayers.innerHTML = await getMinecraftOnlinePlayer();
+
+        const [discordUsers, minecraftPlayers] = await Promise.all([
+            getDiscordOnlineUsers(),
+            getMinecraftOnlinePlayer()
+        ]);
+
+        discordOnlineUsers.value = discordUsers;
+        discordOnlineUsers.innerHTML = discordUsers;
+
+        minecraftOnlinePlayers.value = minecraftPlayers;
+        minecraftOnlinePlayers.innerHTML = minecraftPlayers;
     } else if(locationPathname.includes("rules")) {
         copyIp();
     }
     else if(locationPathname.includes("admin-team")) {
-        for (let team in config.adminTeamPage) {
+        await Promise.all(Object.entries(config.adminTeamPage).map(async ([team, users]) => {
             const atContent = document.querySelector(".at-content");
             
             const group = document.createElement("div");
@@ -266,28 +275,25 @@ const setDataFromConfigToHtml = async () => {
 
             atContent.appendChild(group);
 
-            for (let j = 0; j < config.adminTeamPage[team].length; j++) {
-                let user = config.adminTeamPage[team][j];
-                const group = document.querySelector(`.${team} .users`);
-
+            const groupUsers = document.querySelector(`.${team} .users`);
+            await Promise.all(config.adminTeamPage[team].map(async (user) => {
                 const userDiv = document.createElement("div");
                 userDiv.classList.add("user");
                 userDiv.setAttribute("itemscope", "");
                 userDiv.setAttribute("itemtype", "https://schema.org/Person");
 
-                let userSkin = user.skinUrlOrPathToFile || await getSkinByUuid(user.inGameName);
-                let rankColor = user.rankColor || config.atGroupsDefaultColors[team];
+                const userSkin = user.skinUrlOrPathToFile || await getSkinByUuid(user.inGameName);
+                const rankColor = user.rankColor || config.atGroupsDefaultColors[team];
 
-                const userDivSchema = `
+                userDiv.innerHTML = `
                     <img src="${userSkin}" alt="${user.inGameName}" loading="lazy" itemprop="image">
                     <h5 class="name" itemprop="name">${user.inGameName}</h5>
                     <p class="rank ${team}" style="background: ${rankColor}" itemprop="jobTitle">${user.rank}</p>
                 `;
 
-                userDiv.innerHTML = userDivSchema;
-                group.appendChild(userDiv);
-            }
-        }
+                groupUsers.appendChild(userDiv);
+            }));
+        }));
     } else if(locationPathname.includes("contact")) {
         contactForm.action = `https://formsubmit.co/${config.contactPage.email}`;
         discordOnlineUsers.innerHTML = await getDiscordOnlineUsers();
