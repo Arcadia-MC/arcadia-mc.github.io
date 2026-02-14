@@ -38,7 +38,7 @@ const config = {
     */
     userSKinTypeInAdminTeam: "bust", /*[full, bust, head, face, front, frontFull, skin]*/
     atGroupsDefaultColors: {
-        admins: "rgba(255, 124, 124, 0.5)",
+        admins: "rgba(255, 10, 10, 0.8)",
         staff: "rgba(124, 255, 124, 0.5)",
 
     },
@@ -47,14 +47,10 @@ const config = {
             {
                 inGameName: "Neplex",
                 rank: "Admin",
-                skinUrlOrPathToFile: "",
-                rankColor: "rgba(255, 3, 3, 1)"
             },
             {
                 inGameName: "EpioneChlorys",
                 rank: "Admin",
-                skinUrlOrPathToFile: "",
-                rankColor: "rgba(255, 3, 3, 1)"
             }
         ],
         
@@ -62,20 +58,16 @@ const config = {
             {
                 inGameName: "Aela__",
                 rank: "Gardienne",
-                skinUrlOrPathToFile: "",
-                rankColor: "rgba(3, 3, 255, 1)"
+                rankColor: "rgba(3, 3, 255, 1)",
             },
             {
                 inGameName: "Zoryynn",
                 rank: "Gardien",
-                skinUrlOrPathToFile: "",
-                rankColor: "rgba(3, 3, 255, 1)"
+                rankColor: "rgba(3, 3, 255, 1)",
             },
             {
                 inGameName: "Usapii",
                 rank: "Historien",
-                skinUrlOrPathToFile: "",
-                rankColor: ""
             }
         ]
     },
@@ -83,33 +75,11 @@ const config = {
     /*
     Contact form
     ------------
-    To activate, you need to send the first email via the contact form and confirm it in the email.
-    Emails are sent via https://formsubmit.co/
     */
     contactPage: {
-        email: "arcadia@bitbaker.fr"
+        webhookUrl: "https://discord.com/api/webhooks/1472275343497891933/qVx3OrsZDMkeFrA4ubfvMwtQXI3BR5aiAujsXcB1aIylLprbMSSnAXUt-9d207lGTzlD"
     }
 }
-
-/*If you want to change website color go to /css/global.css and in :root {} is a color pallete (don't change names of variables, change only values)*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*If you want everything to work as it should and you don't understand what is written here, don't touch it :D*/
-
 
 /*Mobile navbar (open, close)*/
 const navbar = document.querySelector(".navbar");
@@ -117,22 +87,10 @@ const navbarLinks = document.querySelector(".links");
 const hamburger = document.querySelector(".hamburger");
 
 hamburger.addEventListener("click", () => {
-    navbar.classList.toggle("active");
+    const expanded = navbar.classList.toggle("active");
     navbarLinks.classList.toggle("active");
+    hamburger.setAttribute("aria-expanded", expanded);
 })
-
-/*FAQs*/
-const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
-
-accordionItemHeaders.forEach(accordionItemHeader => {
-    accordionItemHeader.addEventListener("click", () => {
-        accordionItemHeader.classList.toggle("active");
-        const accordionItemBody = accordionItemHeader.nextElementSibling;
-
-        if(accordionItemHeader.classList.contains("active")) accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
-        else accordionItemBody.style.maxHeight = "0px";
-    });
-});
 
 /*Config navbar*/
 const serverName = document.querySelector(".server-name");
@@ -229,6 +187,36 @@ const copyIp = () => {
     })
 }
 
+const sendform = async () => {
+  const webhookBody = {
+    embeds: [
+      {
+        title: "Formulaire de contact",
+        fields: [
+          { name: "Username", value: document.getElementById('name').value },
+          { name: "Discord", value: document.getElementById('discord-name').value },
+          { name: "Email", value: document.getElementById('email').value },
+          { name: "Message", value: document.getElementById('message').value },
+        ],
+      },
+    ],
+  };
+
+  const response = await fetch(config.contactPage.webhookUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(webhookBody),
+  });
+
+  if (response.ok) {
+    alert("Votre message a bien été envoyé");
+  } else {
+    alert("Une erreur s'est produite ! Veuillez réessayer plus tard !");
+  }
+};
+
 const setDataFromConfigToHtml = async () => {
     /*Set config data to navbar*/
     serverName.innerHTML = config.serverInfo.serverName;
@@ -287,7 +275,7 @@ const setDataFromConfigToHtml = async () => {
 
                 userDiv.innerHTML = `
                     <img src="${userSkin}" alt="${user.inGameName}" loading="lazy" itemprop="image">
-                    <h5 class="name" itemprop="name">${user.inGameName}</h5>
+                    <h3 class="name" itemprop="name">${user.inGameName}</h3>
                     <p class="rank ${team}" style="background: ${rankColor}" itemprop="jobTitle">${user.rank}</p>
                 `;
 
@@ -295,9 +283,9 @@ const setDataFromConfigToHtml = async () => {
             }));
         }));
     } else if(locationPathname.includes("contact")) {
-        contactForm.action = `https://formsubmit.co/${config.contactPage.email}`;
-        discordOnlineUsers.innerHTML = await getDiscordOnlineUsers();
-        inputWithLocationAfterSubmit.value = location.href;
+        const discordUsers = await getDiscordOnlineUsers();
+        discordOnlineUsers.value = discordUsers;
+        discordOnlineUsers.innerHTML = discordUsers;
     }
 }
 

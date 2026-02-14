@@ -63,7 +63,7 @@
     font-weight: 600;
 }
 
-#header .content .left .server-name h1 {
+#header .content .left .server-name h2 {
     color: var(--main-color);
     text-transform: uppercase;
     font-size: 65px;
@@ -106,6 +106,8 @@
 }
 
 #header .content .left .buttons .how-to-join {
+    text-decoration: none;
+    display: inline-block;
     background: var(--how-to-join-button-background);
     border: 2px solid var(--description-color);
     border-radius: 3px;
@@ -197,7 +199,7 @@
     font-weight: 400;
 }
 
-#header .content .right .stats .stat .texts p span {
+#header .content .right .stats .stat .texts .stat-number {
     color: var(--green-color);
 }
 
@@ -276,7 +278,9 @@
     right: 50px;
 }
 
-#about .content .right .img-background {
+#about .content .right::after {
+    content: '';
+    display: block;
     position: absolute;
     width: 210px;
     height: calc(100% - 40px);
@@ -284,7 +288,6 @@
     background: var(--main-color);
     z-index: 0;
     bottom: 5px;
-
 }
 
 /*Mini games*/
@@ -392,21 +395,40 @@
     justify-content: center;
     align-items: center;
     gap: 40px;
+    color: var(--white-color);
+}
+
+#discord .content span,
+#discord .content code {
+    color: var(--main-color);
+    font-weight: 700;
 }
 
 #discord .content .section-title {
     font-size: 30px;
     font-weight: 700;
-    color: var(--white-color);
     position: relative;
     text-align: center;
 }
 
-#discord .content .section-title span {
+#discord .content .section-description {
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 10px 0 0 40px;
+}
+
+#discord .content .section-description ol li:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+#discord .content .section-description ol li::marker {
     color: var(--main-color);
+    font-weight: 700;
 }
 
 #discord .content .join-discord {
+    text-decoration: none;
+    display: inline-block;
     background: var(--copy-ip-button-background);
     border: 2px solid var(--main-color);
     border-radius: 3px;
@@ -486,22 +508,19 @@
     align-items: center;
 }
 
-#vote .content .links .url {
-    text-decoration: none;
-}
-
-#vote .content .links .url:hover .link .link-description .icon {
-    transform: scale(1.1);
-}
-
 #vote .content .links .link {
     display: flex;
+    text-decoration: none;
     flex-direction: column;
     gap: 10px;
     background: var(--stats-background);
     padding: 20px;
     border-radius: 5px;
     max-width: 400px;
+}
+
+#vote .content .links .link:hover .link-description .icon {
+    transform: scale(1.1);
 }
 
 #vote .content .links .link h3 {
@@ -614,6 +633,7 @@
 }
 
 #faq .content .accordion .accordion-item .accordion-item-header {
+    list-style: none;
     padding: 20px 50px 20px 20px;
     line-height: 1.6;
     font-weight: 600;
@@ -631,14 +651,8 @@
     right: 20px;
 }
 
-#faq .content .accordion .accordion-item .accordion-item-header.active::after {
+#faq .content .accordion .accordion-item[open] .accordion-item-header::after {
     content: "\2212";
-}
-
-#faq .content .accordion .accordion-item .accordion-item-body {
-    max-height: 0;
-    overflow: hidden;
-    transition: 0.2s ease-in-out;
 }
 
 #faq .content .accordion .accordion-item .accordion-item-body .accordion-item-body-content {
@@ -720,7 +734,7 @@
         font-size: 15px;
     }
 
-    #header .content .left .server-name h1 {
+    #header .content .left .server-name h2 {
         font-size: 40px;
     }
 
@@ -752,7 +766,7 @@
 }
 
 @media screen and (max-width: 447px) {
-    #header .content .left .server-name h1 {
+    #header .content .left .server-name h2 {
         font-size: 30px;
     }
 }
@@ -785,7 +799,7 @@
         right: 0;
     }
 
-    #about .content .right .img-background {
+    #about .content .right::after {
         width: 100%;
     }
 }
@@ -804,6 +818,10 @@
 
 /*Vote*/
 @media screen and (max-width: 1313px) {
+    #vote .content .info .section-description {
+        max-width: 100%;
+    }
+    
     #vote .content .links {
         flex-direction: column;
     }

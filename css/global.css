@@ -77,13 +77,14 @@ body {
   height: auto;
 }
 
-.navbar .menu-mobile .logo h3 {
+.navbar .menu-mobile .logo h1 {
   color: var(--white-color);
   font-weight: 900;
   font-size: 20px;
 }
 
 .navbar .links {
+  list-style: none;
   display: flex;
   flex-direction: row;
   gap: 30px;
@@ -119,6 +120,8 @@ body {
 }
 
 .navbar .menu-mobile .hamburger {
+  background: none;
+  border: none;
   color: var(--white-color);
   font-size: 20px;
   cursor: pointer;

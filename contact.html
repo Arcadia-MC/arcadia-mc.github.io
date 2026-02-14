@@ -5,13 +5,13 @@
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-K4CFSL52');</script>
     <!-- End Google Tag Manager -->
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="theme-color" content="#001526" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#001526">
 
-    <meta name="description" content="Contactez l'équipe pour toute question ou suggestion concernant le serveur Arcadia." />
-    <meta name="author" content="Arcadia team" />
+    <meta name="description" content="Contactez l'équipe pour toute question ou suggestion concernant le serveur Arcadia.">
+    <meta name="author" content="Arcadia team">
 
     <meta property="og:title" content="Arcadia - Contact">
     <meta property="og:description" content="Contactez l'équipe pour toute question ou suggestion concernant le serveur Arcadia.">
@@ -20,13 +20,16 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.arcadia-mc.eu/contact.html">
 
-    <link rel="preload" href="images/header-background.webp" as="image" fetchpriority="high" importance="high">
+    <link rel="preload" href="images/header-background.webp" as="image" fetchpriority="high">
 
     <link rel="canonical" href="https://www.arcadia-mc.eu/contact.html">
-    <link rel="icon" href="images/logo.webp" />
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/pages/contact.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" />
+    <link rel="icon" href="images/logo.webp">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/pages/contact.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+
+    <script src="https://kit.fontawesome.com/cbf5ee59c8.js" crossorigin="anonymous"></script>
+    <script src="js/script.js" defer></script>
 
     <title>Arcadia - Contact</title>
 </head>
@@ -38,88 +41,75 @@
     <!--Navbar-->
     <nav class="navbar">
         <div class="menu-mobile">
-            <a href="index.html" aria-label="Aller à la page d'accueil">
-                <div class="logo">
-                    <img src="images/logo.webp" alt="Logo du serveur Arcadia" class="logo-img">
-                    <h3 class="server-name">Arcadia</h3>
-                </div>
+            <a href="index.html" class="logo" aria-label="Aller à la page d'accueil">
+                <img src="images/logo.webp" alt="Logo du serveur Arcadia" class="logo-img">
+                <h1 class="server-name">Arcadia</h1>
             </a>
-            <div class="hamburger" role="button" aria-label="Ouvrir/fermer le menu" aria-expanded="false" tabindex="0">
+            <button class="hamburger" aria-label="Ouvrir/fermer le menu" aria-expanded="false">
                 <i class="fa-solid fa-bars"></i>
-            </div>
+            </button>
         </div>
-        
-        <div class="links">
-            <a href="index.html" class="link">Accueil</a>
-            <a href="rules.html" class="link">Règlement</a>
-            <a href="admin-team.html" class="link">L'équipe</a>
-            <a href="https://maps.arcadia-mc.eu" target="_blank" class="link">La carte</a>
-            <a href="#" class="link active" aria-current="page">Contact</a>
-        </div>
+
+        <menu class="links">
+            <li><a href="index.html" class="link">Accueil</a></li>
+            <li><a href="rules.html" class="link">Règlement</a></li>
+            <li><a href="admin-team.html" class="link">L'équipe</a></li>
+            <li><a href="https://maps.arcadia-mc.eu" target="_blank" class="link">La carte <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+            <li><a href="#" class="link active" aria-current="page">Contact</a></li>
+        </menu>
     </nav>
-    
+
     <!--Header-->
     <header id="header">
         <div class="content">
-            <div class="info">
+            <hgroup class="info">
                 <p class="minecraft-server-ip">play.arcadia-mc.eu</p>
-                <h1 class="title"><span>Connect</span> with us</h1>
-            </div>
-            <p class="description">
-                Do you have a problem and need to solve it? Write to us below.
-            </p>
+                <h2 class="title">Nous <span>contacter</span></h2>
+            </hgroup>
+            <p class="description">Vous avez un problème et vous avez besoin d'aide pour le résoudre ?<br>Écrivez-nous ci-dessous.</p>
         </div>
     </header>
 
     <main>
-    
+
     <!--Contacts-->
     <section id="contacts">
         <div class="content">
-            <h2 class="section-title">Contact form</h2>
+            <h2 class="section-title">Formulaire de contact</h2>
             
             <div class="columns">
-                <form class="contact-form" action="" method="POST">
-                    <input type="hidden" name="_subject" value="Message From Website">
-                    <input type="hidden" name="_template" value="box">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="" class="location-after-submit">
-                    
+                <form class="contact-form" action="javascript:sendform()">
                     <div class="row">
-                        <label for="name">* In-game username (or Real name)</label>
-                        <input type="text" required id="name" name="name" placeholder="Astronawta">
+                        <label for="name">Nom d'utilisateur dans le jeu *</label>
+                        <input type="text" required id="name" name="name" placeholder="Steve">
                     </div>
                     <div class="row">
-                        <label for="discord-name">Discord username + tag</label>
-                        <input type="text" id="discord-name" name="discord-name" placeholder="Astronawta#0012">
+                        <label for="discord-name">Nom d'utilisateur Discord</label>
+                        <input type="text" id="discord-name" name="discord-name" placeholder="Steve">
                     </div>
                     <div class="row">
-                        <label for="email">* Email</label>
-                        <input type="email" required id="email" name="email" placeholder="astronawta@example.com">
+                        <label for="email">Email *</label>
+                        <input type="email" required id="email" name="email" placeholder="steve@minecraft.net">
                     </div>
                     <div class="row">
-                        <label for="message">* Message</label>
-                        <textarea required id="message" name="message" placeholder="I have a question..."></textarea>
+                        <label for="message">Message *</label>
+                        <textarea required id="message" name="message" placeholder="J'ai une question..."></textarea>
                     </div>
                     <div class="form-footer">
-                        <p class="alert">Fields marked with * are required</p>
-                        <button type="submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                        <p class="alert">Les champs marqués d'un * sont obligatoires</p>
+                        <button type="submit">Envoyer le message <i class="fa-solid fa-paper-plane"></i></button>
                     </div>
                 </form>
-                
-                <a href="https://discord.arcadia-mc.eu" class="url discord-link">
-                    <div class="link">
-                        <h5>Join our discord</h5>
-                        <div class="link-description">
-                            <p class="description">
-                                Lörem ipsum tosk nedust hemiktigt ifall hubot, hubot
-                                <br>-----------
-                                <br><span class="discord-online-users">None</span> users online
-                            </p>
-                            <div class="icon">
-                                <i class="fa-brands fa-discord"></i>
-                            </div>
-                        </div>
+
+                <a href="https://discord.arcadia-mc.eu" target="_blank" class="link discord-link">
+                    <h3>Rejoins le Discord</h3>
+                    <div class="link-description">
+                        <p class="description">
+                            Rejoins nous sur <span>Discord</span> pour échanger directement avec la communauté.
+                            <br><br>
+                            <data class="discord-online-users" value="0">0</data> users online
+                        </p>
+                        <div class="icon"><i class="fa-brands fa-discord"></i></div>
                     </div>
                 </a>
             </div>
@@ -140,7 +130,4 @@
         </div>
     </footer>
 </body>
-
-<script src="js/script.js" defer></script>
-<script src="https://kit.fontawesome.com/cbf5ee59c8.js" crossorigin="anonymous"></script>
 </html>

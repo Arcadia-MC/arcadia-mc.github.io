@@ -201,6 +201,8 @@
 }
 
 #join-server .content .buttons .join-discord {
+    text-decoration: none;
+    display: inline-block;
     background: var(--how-to-join-button-background);
     border: 2px solid var(--description-color);
     border-radius: 3px;

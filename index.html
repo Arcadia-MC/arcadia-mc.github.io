@@ -5,14 +5,14 @@
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-K4CFSL52');</script>
     <!-- End Google Tag Manager -->
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="theme-color" content="#001526" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#001526">
 
-    <meta name="description" content="Arcadia est un serveur Minecraft RPG survie vanilla francophone depuis 2021. Explorez un monde inédit, une économie dynamique, des quêtes, des événements réguliers et une communauté active et bienveillante. Rejoignez l'aventure !" />
+    <meta name="description" content="Arcadia est un serveur Minecraft RPG survie vanilla francophone depuis 2021. Explorez un monde inédit, une économie dynamique, des quêtes, des événements réguliers et une communauté active et bienveillante. Rejoignez l'aventure !">
     <meta name="keywords" content="serveur minecraft rpg, serveur minecraft survie, serveur minecraft francophone, serveur minecraft vanilla, minecraft rpg survie, minecraft économie dynamique, minecraft quêtes, minecraft événements, minecraft items customs, minecraft monde inédit, serveur minecraft communauté active, serveur minecraft 2026">
-    <meta name="author" content="Arcadia team" />
+    <meta name="author" content="Arcadia team">
 
     <meta property="og:title" content="Arcadia - Le serveur minecraft RPG goût vanille.">
     <meta property="og:description" content="Arcadia est un serveur Minecraft RPG survie vanilla francophone depuis 2021. Explorez un monde inédit, une économie dynamique, des quêtes, des événements réguliers et une communauté active et bienveillante. Rejoignez l'aventure !">
@@ -21,13 +21,16 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.arcadia-mc.eu/">
 
-    <link rel="preload" href="images/header-background.webp" as="image" fetchpriority="high" importance="high">
+    <link rel="preload" href="images/header-background.webp" as="image" fetchpriority="high">
 
     <link rel="canonical" href="https://www.arcadia-mc.eu/">
-    <link rel="icon" href="images/logo.webp" />
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/pages/home.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" />
+    <link rel="icon" href="images/logo.webp">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/pages/home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+
+    <script src="https://kit.fontawesome.com/cbf5ee59c8.js" crossorigin="anonymous"></script>
+    <script src="js/script.js" defer></script>
 
     <title>Arcadia - Le serveur Minecraft RPG goût vanille.</title>
 </head>
@@ -39,76 +42,76 @@
     <!--Navbar-->
     <nav class="navbar">
         <div class="menu-mobile">
-            <a href="index.html" aria-label="Aller à la page d'accueil">
-                <div class="logo">
-                    <img src="images/logo.webp" alt="Logo du serveur Arcadia" class="logo-img" />
-                    <h3 class="server-name">Arcadia</h3>
-                </div>
+            <a href="index.html" class="logo" aria-label="Aller à la page d'accueil">
+                <img src="images/logo.webp" alt="Logo du serveur Arcadia" class="logo-img">
+                <h1 class="server-name">Arcadia</h1>
             </a>
-            <div class="hamburger" role="button" aria-label="Ouvrir/fermer le menu" aria-expanded="false" tabindex="0">
+            <button class="hamburger" aria-label="Ouvrir/fermer le menu" aria-expanded="false">
                 <i class="fa-solid fa-bars"></i>
-            </div>
+            </button>
         </div>
 
-        <div class="links">
-            <a href="#" class="link active" aria-current="page">Accueil</a>
-            <a href="rules.html" class="link">Règlement</a>
-            <a href="admin-team.html" class="link">L'équipe</a>
-            <a href="https://maps.arcadia-mc.eu" target="_blank" class="link">La carte</a>
-        </div>
+        <menu class="links">
+            <li><a href="#" class="link active" aria-current="page">Accueil</a></li>
+            <li><a href="rules.html" class="link">Règlement</a></li>
+            <li><a href="admin-team.html" class="link">L'équipe</a></li>
+            <li><a href="https://maps.arcadia-mc.eu" target="_blank" class="link">La carte <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+            <li><a href="contact.html" class="link">Contact</a></li>
+        </menu>
     </nav>
 
     <!--Header-->
     <header id="header" itemscope itemtype="https://schema.org/GameServer">
         <div class="content">
             <div class="left">
-                <div class="server-name">
+                <hgroup class="server-name">
                     <p>Le serveur RPG goût vanille !</p>
-                    <h1 class="minecraft-server-ip" itemprop="url">play.arcadia-mc.eu</h1>
-                </div>
+                    <h2 class="minecraft-server-ip" itemprop="url">play.arcadia-mc.eu</h2>
+                </hgroup>
                 <p class="server-description" itemprop="description">
                     Entrez dans <span itemprop="name">Arcadia</span>, un serveur
                     <span itemscope itemtype="https://schema.org/VideoGame" itemprop="game">
-                        <link itemprop="sameAs" href="https://fr.wikipedia.org/wiki/Minecraft" />
+                        <link itemprop="sameAs" href="https://www.minecraft.net">
+                        <link itemprop="sameAs" href="https://fr.wikipedia.org/wiki/Minecraft">
                         <span itemprop="name">Minecraft</span>
                     </span>
-                    francophone fondé en <time>2021</time> par la
-                    <span id="botgaming" itemscope itemtype="https://schema.org/Organization" itemprop="owner">
-                        <link itemprop="sameAs" href="https://www.botgaming.eu" />
+                    francophone fondé en <time datetime="2021">2021</time> par la
+                    <span itemscope itemtype="https://schema.org/Organization" itemprop="owner">
+                        <link itemprop="sameAs" href="https://www.botgaming.eu">
                         <span itemprop="name">BOT Gaming</span>
                     </span>
                     et en constante évolution.
                     La cité est conçue pour accueillir aussi bien les bâtisseurs que les aventuriers et les commerçants.
-                    <br /><br />
+                    <br><br>
                     Rejoignez-nous et jouez avec vos amis.
                 </p>
-                <div class="buttons">
-                    <button class="copy-ip" aria-label="Copier l'adresse IP du serveur">Copier l'adresse</button>
-                    <a href="#about"><button class="how-to-join" aria-label="Aller à la section Plus d'information">Plus d'info !</button></a>
-                </div>
+                <menu class="buttons">
+                    <li><button class="copy-ip" aria-label="Copier l'adresse IP du serveur">Copier l'adresse</button></li>
+                    <li><a href="#about" class="how-to-join" aria-label="Aller à la section Plus d'information">Plus d'infos !</a></li>
+                </menu>
                 <p class="ip-copied">L'adresse a été copiée !</p>
             </div>
 
-            <div class="right">
-                <img src="images/logo.webp" alt="Logo du serveur Arcadia" class="logo-img logo-img-header" itemprop="image"/>
+            <aside class="right">
+                <img src="images/logo.webp" alt="Logo du serveur Arcadia" class="logo-img logo-img-header" itemprop="image">
                 
                 <div class="stats">
-                    <div class="stat" role="region" aria-label="Statistiques Discord">
+                    <section class="stat" aria-label="Statistiques Discord">
                         <div class="icon"><i class="fa-brands fa-discord"></i></div>
                         <div class="texts">
                             <h2 class="stat-title">Discord</h2>
-                            <p><span class="stat-number discord-online-users" aria-live="polite">0</span> utilisateurs en ligne</p>
+                            <p><data value="0" class="stat-number discord-online-users" aria-live="polite">0</data> utilisateurs en ligne</p>
                         </div>
-                    </div>
-                    <div class="stat" role="region" aria-label="Statistiques Minecraft">
+                    </section>
+                    <section class="stat" aria-label="Statistiques Minecraft">
                         <div class="icon"><i class="fa-solid fa-server"></i></div>
                         <div class="texts">
                             <h2 class="stat-title">Minecraft</h2>
-                            <p><span class="stat-number minecraft-online-players" aria-live="polite" itemprop="playersOnline">0</span> joueurs en ligne</p>
+                            <p><data value="0" class="stat-number minecraft-online-players" aria-live="polite" itemprop="playersOnline">0</data> joueurs en ligne</p>
                         </div>
-                    </div>
+                    </section>
                 </div>
-            </div>
+            </aside>
         </div>
     </header>
 
@@ -124,37 +127,36 @@
                         Nous sommes une communauté de joueurs réunis depuis la première aventure Arcadia en 2021.
                         Créé à l'origine par un collectif de streamers: la
                         <span itemscope itemtype="https://schema.org/Organization">
-                            <link itemprop="sameAs" href="#botgaming" />
+                            <link itemprop="sameAs" href="https://www.botgaming.eu">
                             <a href="https://www.botgaming.eu" itemprop="url">
                                 <span itemprop="name">BOT Gaming</span>
                             </a>
                         </span>
                         qui en sont aujourd'hui les Gardiens, qui veillent au respect et à la bonne ambiance.
-                        <br /><br />
+                        <br><br>
                         Au fil des années, le serveur a connu plusieurs évolutions.
                         Venez découvrir la nouvelle saison : <span>Arcadia Reborn</span> une version RPG plus vanilla mais toujour sans Pay-To-Win.
                     </p>
                 </div>
             </div>
             
-            <div class="right">
-                <img src="images/steve_alex.webp" loading="lazy" alt="Personnages de Minecraft"/>
-                <div class="img-background"></div>
-            </div>
+            <aside class="right">
+                <img src="images/steve_alex.webp" loading="lazy" alt="Personnages de Minecraft">
+            </aside>
         </div>
     </section>
 
     <!--Mini games-->
     <section id="minigames" aria-label="À propos du serveur Arcadia">
         <div class="content miniGames-list">
-            <div class="game">
-                <img src="images/overworld.webp" loading="lazy" alt="Image du jeu" />
+            <section class="game">
+                <img src="images/overworld.webp" loading="lazy" alt="Image du jeu">
                 
                 <div class="info">
                     <h2 class="section-title">Une survie collective</h2>
                     <div class="game-description">
                         <p>
-                            Arcadia c'est avant tout une survie collaborative centrée sur la ville éponyme. Participez à la
+                            <span>Arcadia</span> c'est avant tout une survie collaborative centrée sur la ville éponyme. Participez à la
                             reconstruction en achetant une parcelle et contribuez, avec d'autres joueurs, à faire vivre la cité.
                         </p>
                         <ul class="services">
@@ -165,17 +167,17 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="game">
-                <img src="images/pnjs.webp" loading="lazy" alt="Image du jeu" />
+            <section class="game">
+                <img src="images/pnjs.webp" loading="lazy" alt="Image du jeu">
                 
                 <div class="info">
                     <h2 class="section-title">Un RPG vanilla</h2>
                     <div class="game-description">
                         <p>
-                            Arcadia s'efforce de proposer une expérience RPG immersive et accessible, pensée pour enrichir
-                            le gameplay tout en respectant l'essence et l'identité graphique emblématique de Minecraft.
+                            <span>Arcadia</span> s'efforce de proposer une expérience RPG immersive et accessible, pensée pour enrichir
+                            le gameplay tout en respectant l'essence et l'identité graphique emblématique de <span>Minecraft</span>.
                         </p>
                         <ul class="services">
                             <li class="service">Un système de compétences évolutif donnant accès à des passifs et à des pouvoirs uniques</li>
@@ -185,17 +187,17 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="game">
-                <img src="images/exploration.webp" loading="lazy" alt="Image du jeu" />
+            <section class="game">
+                <img src="images/exploration.webp" loading="lazy" alt="Image du jeu">
                 
                 <div class="info">
                     <h2 class="section-title">Un nouveau monde</h2>
                     <div class="game-description">
                         <p>
-                            Le monde d'Arcadia repose sur une génération entièrement retravaillée, conçue pour
-                            encourager l'exploration et la découverte, tout en restant fidèle au style de Minecraft.
+                            Le monde d'<span>Arcadia</span> repose sur une génération entièrement retravaillée, conçue pour
+                            encourager l'exploration et la découverte, tout en restant fidèle au style de <span>Minecraft</span>.
                         </p>
                         <ul class="services">
                             <li class="service">De nouveaux biomes uniques, chacun avec son ambiance et ses spécificités</li>
@@ -205,57 +207,55 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     </section>
 
     <!--Discord-->
     <section id="discord">
-        <div class="content">
-            <h2 class="section-title">
-                Une <span>question</span> ?<br> Ou vous souhaitez nous rejoindre ?
-                <br><br>
-                Rejoignez <span>Discord !</span>
-            </h2>
-            <a href="https://discord.arcadia-mc.eu" class="discord-link"><button class="join-discord">Join Discord</button></a>
+        <div class="content" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h2 class="section-title" itemprop="name">Comment nous <span>rejoindre</span> ?</h2>
+            <div class="section-description" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <ol itemprop="text">
+                    <li>Rejoins notre serveur <span>Discord</span> ;</li>
+                    <li>Lance <span>Minecraft</span> et connecte-toi au serveur ;</li>
+                    <li>En jeu, tape la commande <code>/discord link</code> ;</li>
+                    <li>Profite de l'aventure à bord de <span>La Bonne Fortune</span> !</li>
+                </ol>
+            </div>
+            <a href="https://discord.arcadia-mc.eu" class="join-discord">Rejoindre le Discord</a>
         </div>
     </section>
 
     <!--Vote (max 2 vote sites)-->
     <section id="vote">
         <div class="content">
-            <div class="info">
-                <h2 class="section-title">Envie de soutenir le serveur ?</h2>
-                <p class="section-description">
-                    Vous pouvez nous aider très simplement en votant pour notre serveur sur les sites de classement, chaque vote
-                    améliore notre visibilité et permet d'attirer de nouveaux joueurs. Si vous préférez un geste direct, faites une
-                    petite donation sur Ko-fi : chaque contribution aide à payer l'hébergement et les plugins. Merci pour votre
-                    soutien !
-                </p>
+            <div class="info" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h2 class="section-title" itemprop="name">Comment soutenir le serveur ?</h2>
+                <div class="section-description" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">
+                        Vous pouvez nous aider très simplement en votant pour notre serveur sur les sites de classement, chaque vote
+                        améliore notre visibilité et permet d'attirer de nouveaux joueurs. Si vous préférez un geste direct, faites une
+                        petite donation sur Ko-fi : chaque contribution aide à payer l'hébergement et les plugins. Merci pour votre
+                        soutien !
+                    </p>
+                </div>
             </div>
 
             <div class="links voteLinks">
-                <a href="https://serveur-minecraft.com/5378" target="_blank" class="url">
-                    <div class="link">
-                        <h3>serveur-minecraft</h3>
-                        <div class="link-description">
-                            <p class="description">La principale liste des serveurs Minecraft francophones et gratuits.</p>
-                            <div class="icon"><i class="fa-solid fa-circle-arrow-right"></i></div>
-                        </div>
+                <a href="https://serveur-minecraft.com/5378" target="_blank" class="link">
+                    <h3>serveur-minecraft</h3>
+                    <div class="link-description">
+                        <p class="description">La principale liste des serveurs <span>Minecraft</span> francophones et gratuits.</p>
+                        <div class="icon"><i class="fa-solid fa-circle-arrow-right"></i></div>
                     </div>
                 </a>
 
-                <a href="https://ko-fi.com/serveurarcadia" target="_blank" class="url">
-                    <div class="link">
-                        <h3>Ko-fi <i class="fa-solid fa-mug-hot"></i></h3>
-                        <div class="link-description">
-                            <p class="description">
-                                Envie de nous payer un café (ou une bière) ?
-                            </p>
-                            <div class="icon">
-                                <i class="fa-solid fa-circle-arrow-right"></i>
-                            </div>
-                        </div>
+                <a href="https://ko-fi.com/serveurarcadia" target="_blank" class="link">
+                    <h3>Ko-fi <i class="fa-solid fa-mug-hot"></i></h3>
+                    <div class="link-description">
+                        <p class="description">Envie de nous payer un café (ou une bière) ?</p>
+                        <div class="icon"><i class="fa-solid fa-circle-arrow-right"></i></div>
                     </div>
                 </a>
             </div>
@@ -271,36 +271,35 @@
             </div>
 
             <div class="accordion faqList">
-                <div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                    <div class="accordion-item-header" role="button" aria-expanded="false" aria-controls="faq1" tabindex="0" itemprop="name">
-                        Je suis bloqué dans les limbes et le serveur me demande de me
-                        connecter à Discord ?
-                    </div>
-                    <div class="accordion-item-body" id="faq1" role="region" aria-hidden="true" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <div class="accordion-item-body-content" itemprop="text">
-                            Lors de votre première connexion, le serveur vous demande de lier votre compte Minecraft à Discord afin
-                            de vérifier votre accès. Cette étape est obligatoire et ne prend qu'une minute. Elle permet de renforcer
-                            la sécurité du serveur, de lutter contre les comptes frauduleux et de garantir une communauté saine.
-                            Seul votre identifiant Discord est utilisé à des fins de vérification.
-                            <br /><br />
+                <details class="accordion-item" name="faq" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="accordion-item-header" itemprop="name">
+                        Je suis bloqué dans les limbes et le serveur me demande de me connecter à Discord ?
+                    </summary>
+                    <div class="accordion-item-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p class="accordion-item-body-content" itemprop="text">
+                            Lors de votre première connexion, le serveur vous demande de lier votre compte <span>Minecraft</span> à
+                            <span>Discord</span> afin de vérifier votre accès. Cette étape est obligatoire et ne prend qu'une minute.
+                            Elle permet de renforcer la sécurité du serveur, de lutter contre les comptes frauduleux et de garantir
+                            une communauté saine. Seul votre identifiant Discord est utilisé à des fins de vérification.
+                            <br><br>
                             Utilisez simplement la commande <code>/discord link</code> et suivez les étapes.
-                        </div>
+                        </p>
                     </div>
-                </div>
-
-                <div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                    <div class="accordion-item-header" role="button" aria-expanded="false" aria-controls="faq2" tabindex="0" itemprop="name">
+                </details>
+                
+                <details class="accordion-item" name="faq" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="accordion-item-header" itemprop="name">
                         Il n'y a pas de commandes <code>/spawn</code> ou <code>/home</code> ?
-                    </div>
-                    <div class="accordion-item-body" id="faq2" role="region" aria-hidden="true" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <div class="accordion-item-body-content" itemprop="text">
-                            Non, sur Arcadia, nous privilégions des mécaniques vanilla plutôt que des commandes globales. Des
-                            équivalents existent toutefois sous forme d'objets ou via des PNJ : rendez-vous chez le sorcier pour
+                    </summary>
+                    <div class="accordion-item-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p class="accordion-item-body-content" itemprop="text">
+                            Non, sur <span>Arcadia</span>, nous privilégions des mécaniques vanilla plutôt que des commandes globales.
+                            Des équivalents existent toutefois sous forme d'objets ou via des PNJ : rendez-vous chez le sorcier pour
                             acheter une potion de rappel ou un parchemin de téléportation. Pour retrouver vos quêtes, titres ou
                             compétences, ouvrez simplement votre journal.
-                        </div>
+                        </p>
                     </div>
-                </div>
+                </details>
             </div>
         </div>
     </section>
@@ -319,7 +318,4 @@
         </div>
     </footer>
 </body>
-
-<script src="js/script.js" defer></script>
-<script src="https://kit.fontawesome.com/cbf5ee59c8.js" crossorigin="anonymous"></script>
 </html>

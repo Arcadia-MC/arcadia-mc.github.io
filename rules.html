@@ -5,13 +5,13 @@
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-K4CFSL52');</script>
     <!-- End Google Tag Manager -->
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="theme-color" content="#001526" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#001526">
 
-    <meta name="description" content="Découvrez les règles du serveur Arcadia pour une communauté saine et agréable." />
-    <meta name="author" content="Arcadia team" />
+    <meta name="description" content="Découvrez les règles du serveur Arcadia pour une communauté saine et agréable.">
+    <meta name="author" content="Arcadia team">
 
     <meta property="og:title" content="Arcadia - Règlement">
     <meta property="og:description" content="Découvrez les règles du serveur Arcadia pour une communauté saine et agréable.">
@@ -20,13 +20,16 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.arcadia-mc.eu/rules.html">
 
-    <link rel="preload" href="images/header-background.webp" as="image" fetchpriority="high" importance="high">
+    <link rel="preload" href="images/header-background.webp" as="image" fetchpriority="high">
 
     <link rel="canonical" href="https://www.arcadia-mc.eu/rules.html">
-    <link rel="icon" href="images/logo.webp" />
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/pages/rules.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" />
+    <link rel="icon" href="images/logo.webp">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/pages/rules.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+
+    <script src="https://kit.fontawesome.com/cbf5ee59c8.js" crossorigin="anonymous"></script>
+    <script src="js/script.js" defer></script>
 
     <title>Arcadia - Règlement</title>
 </head>
@@ -38,32 +41,31 @@
     <!--Navbar-->
     <nav class="navbar">
         <div class="menu-mobile">
-            <a href="index.html" aria-label="Aller à la page d'accueil">
-                <div class="logo">
-                    <img src="images/logo.webp" alt="Logo du serveur Arcadia" class="logo-img" />
-                    <h3 class="server-name">Arcadia</h3>
-                </div>
+            <a href="index.html" class="logo" aria-label="Aller à la page d'accueil">
+                <img src="images/logo.webp" alt="Logo du serveur Arcadia" class="logo-img">
+                <h1 class="server-name">Arcadia</h1>
             </a>
-            <div class="hamburger" role="button" aria-label="Ouvrir/fermer le menu" aria-expanded="false" tabindex="0">
+            <button class="hamburger" aria-label="Ouvrir/fermer le menu" aria-expanded="false">
                 <i class="fa-solid fa-bars"></i>
-            </div>
+            </button>
         </div>
-        
-        <div class="links">
-            <a href="index.html" class="link">Accueil</a>
-            <a href="#" class="link active" aria-current="page">Règlement</a>
-            <a href="admin-team.html" class="link">L'équipe</a>
-            <a href="https://maps.arcadia-mc.eu" target="_blank" class="link">La carte</a>
-        </div>
+
+        <menu class="links">
+            <li><a href="index.html" class="link">Accueil</a></li>
+            <li><a href="#" class="link active" aria-current="page">Règlement</a></li>
+            <li><a href="admin-team.html" class="link">L'équipe</a></li>
+            <li><a href="https://maps.arcadia-mc.eu" target="_blank" class="link">La carte <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+            <li><a href="contact.html" class="link">Contact</a></li>
+        </menu>
     </nav>
-    
+
     <!--Header-->
     <header id="header">
         <div class="content">
-            <div class="info">
+            <hgroup class="info">
                 <p class="minecraft-server-ip">play.arcadia-mc.eu</p>
-                <h1 class="title"><span>Règlement</span> de la communautée</h1>
-            </div>
+                <h2 class="title"><span>Règlement</span> de la communautée</h2>
+            </hgroup>
             <p class="description">Liste de toutes les règles des serveurs</p>
         </div>
     </header>
@@ -75,11 +77,9 @@
         <div class="content">
             <div class="warning" role="alert">
                 <p>L'ignorance des règles n'est pas une excuse !</p>
-                <div class="icon">
-                    <i class="fa-solid fa-exclamation"></i>
-                </div>
+                <div class="icon"><i class="fa-solid fa-exclamation"></i></div>
             </div>
-            
+
             <div class="minecraft-rules rules">
                 <h2 class="minecraft-rules-title rules-title">
                     La vie en communauté
@@ -158,13 +158,12 @@
     <section id="join-server">
         <div class="content">
             <h2 class="section-title">
-                Si vous avez lu les <span>règles</span>, vous pouvez
-                <span>vous connecter</span> sur le serveur !
+                Si vous avez lu les <span>règles</span>, vous pouvez <span>vous connecter</span> sur le serveur !
             </h2>
-            <div class="buttons">
-                <button class="copy-ip" aria-label="Copier l'adresse IP du serveur">Copier l'adresse</button>
-                <a href="https://discord.arcadia-mc.eu" class="discord-link"><button class="join-discord" aria-label="Rejoindre le Discord du serveur">Rejoindre Discord</button></a>
-            </div>
+            <menu class="buttons">
+                <li><button class="copy-ip" aria-label="Copier l'adresse IP du serveur">Copier l'adresse</button></li>
+                <li><a href="https://discord.arcadia-mc.eu" class="join-discord">Rejoindre le Discord</a></li>
+            </menu>
             <p class="ip-copied">L'adresse a été copiée !</p>
         </div>
     </section>
@@ -183,8 +182,5 @@
         </div>
     </footer>
 </body>
-
-<script src="js/script.js" defer></script>
-<script src="https://kit.fontawesome.com/cbf5ee59c8.js" crossorigin="anonymous"></script>
 </html>
     
