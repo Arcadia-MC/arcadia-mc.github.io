@@ -1,0 +1,24 @@
+name: Website Checker
+on: push
+
+jobs:
+    html5:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v6
+       
+            - name: HTML5 Validator
+              uses: anishathalye/proof-html@v2
+              with:
+                directory: .
+
+    lighthouse:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v6
+        
+            - name: Lighthouse check
+              uses: treosh/lighthouse-ci-action@v12
+              with:
+                configPath: '.lighthouserc.yml'
+                uploadArtifacts: true
