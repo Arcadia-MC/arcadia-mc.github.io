@@ -2,17 +2,17 @@ name: Website Checker
 on: push
 
 jobs:
-    html5-check:
+    html5:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v6
        
-            - name: HTML5Validator
-              uses: Cyb3r-Jak3/html5validator-action@v7.2.0
+            - name: HTML5 Validator
+              uses: anishathalye/proof-html@v2
               with:
-                root: .
+                directory: .
 
-    lighthouse-check:
+    lighthouse:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v6
