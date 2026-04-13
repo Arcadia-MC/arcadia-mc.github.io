@@ -136,11 +136,11 @@ const getMinecraftOnlinePlayer = async () => {
 
 const getUuidByUsername = async (username) => {
     try {
-        const usernameToUuidApi = `https://api.minetools.eu/uuid/${username}`;
+        const usernameToUuidApi = `https://playerdb.co/api/player/minecraft/${username}`;
         let response = await fetch(usernameToUuidApi);
         let data = await response.json();
 
-        return data.id;
+        return data.data.player.id;
     } catch (e) {
         console.log(e);
         return null;
@@ -244,8 +244,7 @@ const setDataFromConfigToHtml = async () => {
         minecraftOnlinePlayers.innerHTML = minecraftPlayers;
     } else if(locationPathname.includes("rules")) {
         copyIp();
-    }
-    else if(locationPathname.includes("admin-team")) {
+    } else if(locationPathname.includes("admin-team")) {
         await Promise.all(Object.entries(config.adminTeamPage).map(async ([team, users]) => {
             const atContent = document.querySelector(".at-content");
             
